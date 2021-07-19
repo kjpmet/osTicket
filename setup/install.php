@@ -27,8 +27,6 @@ $wizard=array();
 $wizard['title']=__('osTicket Installer');
 $wizard['tagline']=sprintf(__('Installing osTicket %s'),$installer->getVersionVerbose());
 $wizard['logo']='logo.png';
-$wizard['menu']=array(__('Installation Guide')=>'https://docs.osticket.com/en/latest/Getting%20Started/Installation.html',
-        __('Get Professional Help')=>'https://osticket.com/support');
 
 if($_POST && $_POST['s']) {
     $errors = array();
@@ -57,8 +55,8 @@ if($_POST && $_POST['s']) {
                 $_SESSION['ost_installer']['s']='done';
             } elseif(!($errors=$installer->getErrors()) || !$errors['err']) {
                 $errors['err'] = sprintf('%s %s',
-                    __('Error installing osTicket.'),
-                    __('Correct any errors below and try again.'));
+                    __('Error installing Lucian Helpdesk.'),
+                    __('Correct any errors below and try again. If this error keeps peristing please contact us on support@lucianitsolutions.co.uk'));
             }
             break;
         case 'subscribe':
